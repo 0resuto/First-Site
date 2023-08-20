@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 :root {
- --index: calc(1vh + (1vw / 7));
- --transition: 2s cubic-bezier(.05, .5, 0, 1);
+ --index: calc(1vh + 1vw);
+ --transition: 2s cubic-bezier(.08, .6, 0, 1);
 }
 @font-face {
   font-family: kamerik-3d;
@@ -22,14 +22,14 @@ body {
   font-family: kamerik-3d;
 }
 .logo {
-  --logo-size: calc(var(--index) * 30);
+  --logo-size: calc(calc(var(--index) - 1vw) * 20);
   width: var(--logo-size);
   height: var(--logo-size);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   left: calc(50% - calc(var(--logo-size) / 2));
-  top: calc(50% - calc(var(--logo-size / 2 ) + var(--index) * 4));
+  top: calc(20% - calc(var(--logo-size) / 2));
   z-index: 1;
 }
 .layers {
@@ -40,7 +40,7 @@ body {
   height: 100vh;
   min-height: 500px;
   transform-style: preserve-3d;
-  transform: rotateX(var(--move-y)) rotateY(var(--move-x)); 
+  transform: rotateX(calc(2deg + var(--move-y))) rotateY(var(--move-x)); 
   will-change: transform;
   transition: transform var(--transition);
 }
@@ -54,13 +54,13 @@ body {
   justify-content: center;
 }
 .layer-1 {
-  transform: translateZ(-400px) scale(1.06);
+  transform: translateZ(-400px) scale(1.1);
 }
 .layer-2 {
-  transform: translateZ(-300px) scale(1.02);
+  transform: translateZ(-300px) scale(1.06);
 }
 .layer-2-1 {
-  transform: translateZ(-200px) scale(1.01);
+  transform: translateZ(-200px) scale(1.03);
 }
 .layer-2-2 {
   transform: translateZ(-100px) scale(1);
@@ -69,13 +69,45 @@ body {
   transform: translateZ(100px) scale(1);
 }
 .layer-4 {
-  transform: translateZ(250px) scale(1.2);
-}
+  transform: translateZ(250px) scale(1);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(calc(var(--index)) * 2.8);
+  height: calc(calc(var(--index)) * 7);
+  position: absolute;
+  left: 20vw;
+  top: calc(94.5vh - calc(var(--index)) * 7);
+  }
 .layer-5 {
-  transform: translateZ(550px) scale(1);
+  transform: translateZ(550px) scale(0.8);
+}
+.layer-5_1 {
+  transform: translateZ(0px) scale(1);
 }
 .layer-6 {
   transform: translateZ(400px) scale(1.27);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(calc(var(--index)) * 65);
+  height: calc(calc(var(--index)) * 10);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: calc(92vh - calc(var(--index)) * 1.5);
+}
+.layer-6_1 {
+  transform: translateZ(300px) scale(1.27);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(calc(var(--index)) * 65);
+  height: calc(calc(var(--index)) * 10);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: calc(93vh - calc(var(--index)) * 1.5);
 }
 .hero-content {
   font-size: calc(var(--index) * 2.9);
@@ -84,6 +116,8 @@ body {
   letter-spacing: calc(var(--index) * -.15);
   line-height: 1.35em;
   margin-top: calc(var(--index) * 5.5);
+  margin-left: calc(var(--index) * 5);
+  margin-right: calc(var(--index) * 5);
 }
 .hero-content span {
   display: block;
