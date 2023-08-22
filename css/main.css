@@ -21,6 +21,24 @@ body {
   color: #fff;
   font-family: kamerik-3d;
 }
+
+.loaderArea {
+  background: linear-gradient(180deg, #272f49 0%, #3f2622 200%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+
+.loaded .loaderArea {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s, visibility 2s cubic-bezier(0.62, 0, .47, .11);;
+}
+
 .logo {
   --logo-size: calc(calc(var(--index) - 1vw) * 20);
   width: var(--logo-size);

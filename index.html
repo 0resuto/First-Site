@@ -9,29 +9,44 @@
   <script src="js/app.js" defer></script>
 </head>
 <body>
-  
-<div class="logo" style="background-image: url(img/logo.png);"></div>
 
-<section class="layers">
-  <div class="layers__container">
-    <div class="layers__item layer-1"style="background-image: url(img/layer-1.jpg)"></div>
-    <div class="layers__item layer-2"style="background-image: url(img/layer-2.png)"></div>
-    <div class="layers__item layer-2-1"style="background-image: url(img/layer-2-1.png)"></div>
-    <div class="layers__item layer-2-2"style="background-image: url(img/layer-2-2.png)"></div>
-    <div class="layers__item layer-3">
-      <div class="hero-content">
-        <h1>First Oresuto's <span>website</span></h1>
-        <div class="hero-content__p">"homebrew and almost everything is written off"</div>
-        <button class="button-start">not clickable, but you can try</button>
-      </div>
-    </div>
-    <div class="layers__item layer-4"style="background-image: url(img/layer-4.png)"></div>
-    <div class="layers__item layer-5"style="background-image: url(img/layer-5.png)"></div>
-    <div class="layers__item layer-5_1"style="background-image: url(img/layer-5_1.png)"></div>
-    <div class="layers__item layer-6"style="background-image: url(img/layer-6.png)"></div>
-    <div class="layers__item layer-6_1"style="background-image: url(img/layer-6_1.png)"></div>
+  <div class="loaderArea">
+    <div class="loader"></div>
   </div>
-</section> 
+
+  <div class="logo"style="background-image: url(img/x1ratio/logo.png)"></div>
+
+  <section class="layers">
+    <div class="layers__container">
+      <div class="layers__item layer-1"style="background-image: url(img/x1ratio/layer-1.jpg)"></div>
+      <div class="layers__item layer-2"style="background-image: url(img/x1ratio/layer-2.png)"></div>
+      <div class="layers__item layer-2-1"style="background-image: url(img/x1ratio/layer-2-1.png)"></div>
+      <div class="layers__item layer-2-2"style="background-image: url(img/x1ratio/layer-2-2.png)"></div>
+      <div class="layers__item layer-3">
+        <div class="hero-content">
+          <h1>First Oresuto's <span>website</span></h1>
+          <div class="hero-content__p">"homebrew and almost everything is written off"</div>
+          <button class="button-start">not clickable, but you can try</button>
+        </div>
+      </div>
+      <div class="layers__item layer-4"style="background-image: url(img/x1ratio/layer-4.png)"></div>
+      <div class="layers__item layer-5"style="background-image: url(img/x1ratio/layer-5.png)"></div>
+      <div class="layers__item layer-5_1"style="background-image: url(img/x1ratio/layer-5_1.png)"></div>
+      <div class="layers__item layer-6"style="background-image: url(img/x1ratio/layer-6.png)"></div>
+      <div class="layers__item layer-6_1"style="background-image: url(img/x1ratio/layer-6_1.png)"></div>
+    </div>
+  </section> 
+
+  <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 300);
+    }
+  </script>
 
 </body>
+
 </html>
