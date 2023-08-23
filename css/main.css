@@ -72,10 +72,10 @@ body {
   justify-content: center;
 }
 .layer-1 {
-  transform: translateZ(-400px) scale(1.1);
+  transform: translateZ(-400px) scale(1.15);
 }
 .layer-2 {
-  transform: translateZ(-300px) scale(1.06);
+  transform: translateZ(-300px) scale(1.1);
 }
 .layer-2-1 {
   transform: translateZ(-200px) scale(1.03);

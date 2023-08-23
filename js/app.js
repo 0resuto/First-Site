@@ -7,28 +7,29 @@ document.addEventListener('mousemove', e => {
   })
 })
 
-
 window.addEventListener("deviceorientation", (evt) => {
   const angle_g = evt.gamma;
   const angle_b = evt.beta;
   
-  if (angle_b <= 30){
-    angle_b = 30
+  if (angle_b <= 10){
+    angle_b = 10
   }
-  if (angle_b >= 70){
-    angle_b = 70
+  if (angle_b >= 80){
+    angle_b = 85
   }
-  if (angle_g <= -20){
-    angle_g = -20
+  if (angle_g <= -30){
+    angle_g = -30
   }
-  if (angle_g >= 20){
-    angle_g = 20
+  if (angle_g >= 30){
+    angle_g = 30
   }
 
+  const g = angle_g / 6;
+  const b = (angle_b - 40) / 8;
   Object.assign(document.documentElement, {
     style: `
-    --move-x: ${angle_g}deg;
-    --move-y: ${angle_b - 60 }deg;
+    --move-x: ${g}deg;
+    --move-y: ${-b}deg;
     `
   })  
 });
