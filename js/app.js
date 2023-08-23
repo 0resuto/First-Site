@@ -26,6 +26,8 @@ window.addEventListener("deviceorientation", (evt) => {
 
   const g = angle_g / 6;
   const b = (angle_b - 40) / 8;
+
+  
   Object.assign(document.documentElement, {
     style: `
     --move-x: ${g}deg;
@@ -34,3 +36,10 @@ window.addEventListener("deviceorientation", (evt) => {
   })  
 });
 
+window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 300);
+}
